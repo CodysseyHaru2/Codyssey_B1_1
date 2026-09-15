@@ -1,0 +1,32 @@
+{
+  "id": "task-def-20260915-061130-chrome-readme-c9faa9c8",
+  "job_definition_id": "job-20260915-060954-github-pages-4b0b3a3a",
+  "title": "Chrome에서 필수 요구사항 전체 검증하고 README·제출 스크린샷 작성",
+  "description": "docs/portfolio-spec.md의 필수 요구사항별 검증표를 실제 코드와 실행 화면에 대조한다. 사용한 Chrome 버전/날짜/화면 크기와 테스트 결과를 기록하며 Chrome 확인이 불가능하면 미검증으로 명시한다. 360/768/1280px와 767/768/1023/1024 경계에서 6섹션/레이아웃/가로 넘침을 검사한다. 6인터랙션, 테마 새로고침 유지, API loading/success/error/empty/403/재시도, 폼 빈 값/이메일/오류 수정/성공 안내를 확인한다. 정상/오류 응답은 테스트용 대체 응답으로 재현해 실 API rate limit을 낭비하지 않는다. 최소3흐름(테마, API, 폼)의 이벤트→상태→렌더 함수를 코드와 함께 설명한다. const/let, defer, addEventListener, querySelector/querySelectorAll, textContent/innerHTML, classList, ES6 문법과 map/forEach, CSS 변수/Flex/Grid/미디어 쿼리 및 금지 라이브러리/var/인라인 onclick/style를 정적 검사한다. README에는 프로젝트 설명/기술/폴더 구조/VS Code+Live Server 실행/기능/60·300·0.2 기준/구조 설계와 학습 설명/API 상태와 미션의 비인증 호출 제한 주의/폼 데모 한계/스크린샷/배포 URL 자리와 후속 배포 상태를 기록한다. 데스크톱/모바일/다크 모드 3장의 실제 스크린샷을 생성한다. 소스 수치 출처, 기간·블로그 미확정 정보, 운영 화면 식별정보, API 링크와 접근성/콘솔 오류를 점검하고 결함은 같은 기능 경계 안에서 수정한다.",
+  "created_at": "2026-09-15T06:11:30+00:00",
+  "updated_at": "2026-09-15T06:11:30+00:00",
+  "order_index": 6,
+  "legacy_task_id": "task-20260915-061130-chrome-readme-90060412",
+  "depends_on": [
+    "task-def-20260915-061130-task-def-a342d2a3"
+  ],
+  "expected_output": "docs/verification.md 요구사항별 PASS/FAIL/미검증 기록, README.md, docs/screenshots/desktop.png·mobile.png·dark.png와 필요한 결함 수정",
+  "done_condition": "필수 요구사항은 코드/화면 증거로 대응되고 3상태 흐름을 설명한다. 로컬 검증에서 주요 기능 결함·금지 코드·가로 넘침·콘솔 오류가 없으며 3종 실제 스크린샷과 README 학습/사용/한계 설명이 있다. 공개 배포는 다음 Task로 남겨 로컬 검증을 배포 완료로 과장하지 않는다.",
+  "in_scope": "로컬 Chrome/반응형/접근성/정적 요구사항·상태별 테스트, 기능 경계 내 결함 수정, README와 스크린샷",
+  "out_of_scope": "보너스 기능, 원 프로젝트 성과 재벤치마크, 기존 포트폴리오 수정, 원본 이력서 공개, push/공개 배포",
+  "validation_hint": "미션의 10요구사항·개발환경·제약·제출물을 체크리스트로 전수 검사한다. 시험 버전/viewport/API 대체 응답/실제 화면 증거를 남기고 README의 링크·스크린샷 경로·상태흐름 설명을 재확인한다.",
+  "required_docs": [],
+  "memory_refs": [],
+  "document_outputs": [
+    "docs/verification.md"
+  ],
+  "document_output_exceptions": [
+    "README.md"
+  ],
+  "default_agent": "",
+  "context_policy_id": "",
+  "executor_policy_id": "",
+  "review_policy": "",
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

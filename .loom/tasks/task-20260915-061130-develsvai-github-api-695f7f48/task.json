@@ -1,0 +1,32 @@
+{
+  "id": "task-20260915-061130-develsvai-github-api-695f7f48",
+  "job_id": "job-20260915-060954-github-pages-4b0b3a3a",
+  "title": "develsvai GitHub API와 대표 프로젝트 콘텐츠를 결합한 상태별 카드 구현",
+  "description": "fetch와 async/await, try/catch로 https://api.github.com/users/develsvai/repos를 호출하고 response.ok를 검사한다. 요청 상태 loading/success/error/empty를 명시적으로 관리한다. 성공 응답의 실제 저장소 객체를 구조분해하고 map+템플릿 리터럴로 article 카드를 생성하며 안전하게 innerHTML에 렌더링한다. 표시 데이터는 실제 name/description/language/stargazers_count/html_url/homepage 등이다. Loom/DeepQuest/TinyPilot-KVM-Docker가 실제 응답에 있을 때만 Task 1의 출처 있는 설명·공개 가능한 이미지·근거 링크를 해당 저장소에 결합하고 대표 순서 Loom→DeepQuest→TinyPilot로 배치한다. 나머지 저장소도 실제 데이터로 표시한다. 저장소가 없거나 미일치인 경우 가짜 API 카드/성과/스타 수를 만들지 않는다. API 오류를 정적 카드로 덮어 성공처럼 보여주지 않는다. 문구: 로딩 'GitHub 프로젝트를 불러오는 중입니다…', 오류 '프로젝트를 불러올 수 없습니다'와 재시도, 빈 상태 '표시할 프로젝트가 없습니다', 403 요청 제한 안내와 재시도. 숫자 주장은 원문 출처·측정 계층을 유지하고 DeepQuest AI ops/s와 HTTP req/s를 합치지 않는다. description 누락/language null/homepage 없음에 대한 자연스러운 대체 표시를 제공한다. 외부 데이터는 HTML escape 또는 안전한 DOM 처리와 http/https 링크 검증으로 삽입하고 새 창 링크 보안을 적용한다.",
+  "status": "PENDING",
+  "created_at": "2026-09-15T06:11:30+00:00",
+  "updated_at": "2026-09-15T06:11:30+00:00",
+  "order_index": 4,
+  "assigned_agent": "",
+  "depends_on": [
+    "task-20260915-061129-task-1b697181"
+  ],
+  "expected_output": "실 GitHub 저장소 기반 Projects 카드, 대표 사례 보강 데이터, loading/success/error/empty 및 403/재시도 UI",
+  "done_condition": "develsvai 저장소가 동적으로 표시되며 4상태와 403 안내를 재현할 수 있다. 재시도는 상태를 올바르게 바꾸고 중복 카드를 만들지 않는다. map/템플릿 리터럴/구조분해/fetch/async/await/try-catch 사용이 확인된다. 하드코딩된 API 성공/가짜 메타데이터/불안전한 외부 HTML/검증 안 된 데모 링크가 없다.",
+  "in_scope": "공개 GitHub API 요청, 상태 렌더링, 대표 프로젝트 콘텐츠 매핑과 안전한 카드/링크 생성",
+  "out_of_scope": "개인 토큰/비공개 저장소 호출, 외부 backend, 언어별 필터 보너스, 성과 독립 재측정, 기존 서비스 변경, 실제 장비 제어 링크",
+  "validation_hint": "성공/지연/네트워크 오류/HTTP 오류/403/[] 응답을 테스트 데이터로 분리 재현하고 무리한 실 API 반복 호출을 피한다. 누락된 description/language/homepage, 대표 저장소 미일치, 악성 문자열/URL, 재시도 중복 요청·렌더링을 확인한다.",
+  "required_docs": [],
+  "memory_refs": [],
+  "document_outputs": [],
+  "document_output_exceptions": [],
+  "run_attempts": 0,
+  "last_error": "",
+  "commit_refs": [],
+  "branch_name": "",
+  "git_dirty": false,
+  "git_snapshot_captured_at": "",
+  "artifacts": [],
+  "source_proposal_id": "",
+  "source_prompt": ""
+}
