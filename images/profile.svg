@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320">
+  <title>홍용재 HYJ 이니셜 프로필</title>
+  <rect width="320" height="320" rx="12" fill="#172a33"/>
+  <path d="M32 32h256v256H32Z" fill="none" stroke="#36535e"/>
+  <path d="M32 80h256M32 240h256" stroke="#36535e"/>
+  <text x="48" y="62" fill="#80d7cd" font-family="monospace" font-size="14">BACKEND / AI PLATFORM</text>
+  <text x="160" y="200" text-anchor="middle" fill="#f1f7f8" font-family="Arial,sans-serif" font-size="86" font-weight="700" letter-spacing="-7">HYJ</text>
+  <text x="48" y="268" fill="#a6bec8" font-family="monospace" font-size="14">YONGJAE HONG</text>
+  <circle cx="264" cy="264" r="5" fill="#80d7cd"/>
+</svg>

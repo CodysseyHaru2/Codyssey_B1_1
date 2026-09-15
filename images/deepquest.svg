@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <title>DeepQuest의 Web Queue Worker 비동기 처리 구성 요약도</title>
+  <rect width="640" height="360" fill="#142b3b"/>
+  <text x="36" y="52" fill="#82c9ec" font-family="monospace" font-size="16">DEEPQUEST / ASYNC AI PIPELINE</text>
+  <g fill="none" stroke="#436378" stroke-width="2"><rect x="36" y="109" width="126" height="82" rx="8"/><rect x="195" y="109" width="126" height="82" rx="8"/><rect x="354" y="109" width="126" height="82" rx="8"/><rect x="513" y="109" width="91" height="82" rx="8"/><path d="M162 150h33m126 0h33m126 0h33M417 191v56H258v-56"/></g>
+  <g fill="#e7f4fc" font-family="monospace" font-size="21" text-anchor="middle"><text x="99" y="158">WEB</text><text x="258" y="158">QUEUE</text><text x="417" y="158">WORKER</text><text x="558" y="158">AI</text></g>
+  <text x="338" y="277" text-anchor="middle" fill="#82c9ec" font-family="monospace" font-size="17">BACKLOG / KEDA / OBSERVABILITY</text>
+  <text x="36" y="334" fill="#a2bccd" font-family="monospace" font-size="13">STRUCTURE SUMMARY / NOT A BENCHMARK</text>
+</svg>

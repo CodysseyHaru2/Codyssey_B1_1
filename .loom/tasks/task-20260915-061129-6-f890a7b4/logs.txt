@@ -1,0 +1,8 @@
+[2026-09-15T06:19:06+00:00] agent=codex task=task-20260915-061129-6-f890a7b4 Foreground task session started.
+prompt/context/previous-results 전체 확인. docs/portfolio-spec.md 기준 정적 페이지·CSS·로컬 SVG 구현.
+git diff --check 및 bundled Node --check 통과. XML parser로 4 SVG 유효성 확인.
+HTML/JS var 선언·onclick·인라인 style·외부 실행 CSS/JS 패턴 없음.
+localhost HTTP 200 확인 후 첫 의미 있는 미리보기 handoff. 사이트 등록/push/배포 없음.
+앱 브라우저 실제 CSS 폭 360/767/768/1023/1024/1280: 가로 넘침 없음, label 정상, 깨진 이미지 없음, 768/1024 분기 정상.
+Chrome 연결 불가. 앱 브라우저를 Chrome으로 표기하지 않음. 임시 viewport reset.
+다음: 메뉴·테마·스크롤 상태/렌더링 연결. API/폼 검증은 별도 Task.

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <title>Loom의 사용자 승인과 로컬 기억 구성 요약도</title>
+  <rect width="640" height="360" fill="#192d36"/>
+  <text x="36" y="52" fill="#80d7cd" font-family="monospace" font-size="16">LOOM / WORKFLOW MEMORY</text>
+  <g fill="none" stroke="#45646f" stroke-width="2"><rect x="36" y="99" width="164" height="100" rx="8"/><rect x="238" y="99" width="164" height="100" rx="8"/><rect x="440" y="99" width="164" height="100" rx="8"/><path d="M200 149h38m164 0h38M320 199v39"/></g>
+  <g fill="#eff7f8" font-family="monospace" font-size="21" text-anchor="middle"><text x="118" y="143">PROPOSAL</text><text x="320" y="143">CONTRACT</text><text x="522" y="143">AGENT</text></g>
+  <g fill="#9bb7c1" font-family="monospace" font-size="14" text-anchor="middle"><text x="118" y="172">AI proposes</text><text x="320" y="172">User controls</text><text x="522" y="172">Task executes</text></g>
+  <rect x="238" y="238" width="164" height="68" rx="8" fill="#24474b" stroke="#80d7cd"/>
+  <text x="320" y="279" text-anchor="middle" fill="#a0ebe2" font-family="monospace" font-size="21">LOCAL MEMORY</text>
+  <text x="36" y="334" fill="#9bb7c1" font-family="monospace" font-size="13">STRUCTURE SUMMARY / NOT A LIVE SCREEN</text>
+</svg>
