@@ -18,3 +18,9 @@
 
 - Task: `task-20260915-061130-github-pages-url-d919212a`
 - Tags: `provenance`, `verification`, `public-scope`
+## 2026-09-15T07:42:05+00:00
+
+사용자가 “그 오너 바꿨더니 , 배포가 내려갔어 다시 배포해”라고 현재 에이전트에 재배포를 지시했다. 원격 조회로 실제 새 소유자 develsvai/Codyssey_B1_1, PUBLIC 및 ADMIN 권한, Pages 새 주소 https://develsvai.github.io/Codyssey_B1_1/와 기존 선별 배포 브랜치를 확인했다. 기존 완료 Task를 재실행하지 않고 동일 Job의 후속 Task 8을 foreground 실행한다. 사이트 파일과 공개 제출 링크만 갱신하고 기존 main/develop·PDF·Loom 기록을 외부 배포에 추가하지 않는다.
+
+- Task: `task-20260915-074148-github-pages-a18991f2`
+- Tags: `user-approval`, `redeployment`, `owner-transfer`

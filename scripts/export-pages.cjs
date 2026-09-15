@@ -6,11 +6,17 @@ const path = require('node:path');
 const root = path.resolve(__dirname, '..');
 const destination = process.argv[2];
 const liveURL = process.argv[3] || '';
+const repository = process.argv[4] || 'develsvai/Codyssey_B1_1';
+if (!/^[A-Za-z0-9-]+\/[A-Za-z0-9._-]+$/.test(repository)) {
+  throw new Error('확인한 owner/repository만 사용하세요.');
+}
+const [owner, repositoryName] = repository.split('/');
+const expectedPagesURL = `https://${owner.toLowerCase()}.github.io/${repositoryName}/`;
 if (!destination || !/^\/private\/tmp\/hyj-pages\.[A-Za-z0-9]+$/.test(destination)) {
   throw new Error('mktemp -d /private/tmp/hyj-pages.XXXXXX 결과를 사용하세요.');
 }
 if (fs.realpathSync(destination) !== destination) throw new Error('심볼릭 링크 대상은 허용하지 않습니다.');
-if (liveURL && liveURL !== 'https://codysseyharu2.github.io/Codyssey_B1_1/') {
+if (liveURL && liveURL !== expectedPagesURL) {
   throw new Error('검증한 Pages URL만 사용하세요.');
 }
 const files = [
@@ -38,7 +44,7 @@ const readme = `# 홍용재 포트폴리오
 
 Backend / AI Platform Engineer 홍용재의 반응형 단일 페이지입니다. 순수 HTML5, CSS3, JavaScript ES6+로 구현했습니다.
 
-- 저장소: [CodysseyHaru2/Codyssey_B1_1](https://github.com/CodysseyHaru2/Codyssey_B1_1/tree/codex/portfolio-pages)
+- 저장소: [${repository}](https://github.com/${repository}/tree/codex/portfolio-pages)
 - 공개 페이지: ${liveURL ? `[소개 페이지](${liveURL})` : '게시 확인 중'}
 - 원본 PDF, 전화번호, 작업 기록, API 토큰, 내부 장비 주소는 배포에 포함하지 않습니다.
 

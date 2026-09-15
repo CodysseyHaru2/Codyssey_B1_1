@@ -4,11 +4,13 @@ Backend / AI Platform Engineer 홍용재를 소개하는 모바일 퍼스트 단
 
 현재 상태: **GitHub Pages 배포 완료, Chrome 최종 확인은 미완료**. 실제 공개 페이지에서 자산·반응형·메뉴·테마 복원·실 API·문의 데모를 확인했습니다. Chrome 검증 완료로 과장하지 않습니다.
 
-- 저장소: [CodysseyHaru2/Codyssey_B1_1](https://github.com/CodysseyHaru2/Codyssey_B1_1).
-- 공개 소스: [소개 페이지 배포 브랜치](https://github.com/CodysseyHaru2/Codyssey_B1_1/tree/codex/portfolio-pages). 기존 main은 변경하지 않고 사이트 자산만 별도 push했습니다.
-- GitHub Pages: [홍용재 소개 페이지](https://codysseyharu2.github.io/Codyssey_B1_1/).
+- 저장소: [develsvai/Codyssey_B1_1](https://github.com/develsvai/Codyssey_B1_1).
+- 공개 소스: [소개 페이지 배포 브랜치](https://github.com/develsvai/Codyssey_B1_1/tree/codex/portfolio-pages). 기존 main은 변경하지 않고 사이트 자산만 별도 push했습니다.
+- GitHub Pages: [홍용재 소개 페이지](https://develsvai.github.io/Codyssey_B1_1/).
 - 로컬 주소: `http://127.0.0.1:4173/` — 로컬 서버 실행 중에만 열립니다.
 - [요구사항·콘텐츠 명세](docs/portfolio-spec.md), [로컬 검증 기록](docs/verification.md), [공개 배포 검증 기록](docs/deployment.md).
+
+2026-09-15 저장소 소유자 이전 후 새 주소로 재게시했습니다. 이전 CodysseyHaru2 Pages 주소는 404이며 새 소유자의 위 주소를 사용합니다. 저장소 URL의 리디렉션과 달리 Pages URL은 자동 리디렉션되지 않습니다. [GitHub 저장소 이전 안내](https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository).
 
 ## 기술과 파일 구조
 
@@ -84,7 +86,7 @@ https://api.github.com/users/develsvai/repos?per_page=100&sort=pushed&page=1
 
 비인증 요청의 기본 제한은 시간당 60회이므로 반복 새로고침을 피합니다. [GitHub 요청 제한 문서](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api). 토큰을 공개 JS에 넣지 않습니다. 상태별 시험에는 제어된 대체 응답을 사용했습니다.
 
-실제 이름이 일치하는 Loom→DeepQuest→TinyPilot-KVM-Docker에만 출처 있는 설명·이미지를 보강합니다. 2026-09-15 공개 응답에는 저장소 10개 중 TinyPilot-KVM-Docker만 일치했습니다. Loom/DeepQuest는 없는 카드나 가짜 메타데이터를 만들지 않고 누락 안내를 합니다. 나머지 저장소는 API description/language/stars/html_url/homepage와 fork 구분을 그대로 사용합니다. 설명·언어 누락에는 대체 안내를 제공합니다.
+실제 이름이 일치하는 Loom→DeepQuest→TinyPilot-KVM-Docker에만 출처 있는 설명·이미지를 보강합니다. 2026-09-15 최초 배포 검증에서는 저장소 10개 중 TinyPilot-KVM-Docker만 일치했습니다. 소유자 이전 후 재배포에서는 이 저장소를 포함한 11개가 표시됐으며 대표 이름 일치는 동일했습니다. Loom/DeepQuest는 없는 카드나 가짜 메타데이터를 만들지 않고 누락 안내를 합니다. 나머지 저장소는 API description/language/stars/html_url/homepage와 fork 구분을 그대로 사용합니다. 설명·언어 누락에는 대체 안내를 제공합니다.
 
 외부 데이터는 HTML escape, 링크는 http/https·공개 호스트 검사와 새 창 보안 속성을 적용합니다. 내부 IP·localhost·tailnet 장비 링크·자격증명 URL은 표시하지 않습니다. 링크 제공은 원 서비스의 독립 운영 검증이나 데모 접근 보장을 뜻하지 않습니다.
 
@@ -134,7 +136,7 @@ node tests/browser-server.cjs
 
 - 안정된 Chrome에서 화면·기능·콘솔을 재검증하고 기록을 갱신합니다.
 - 사용자의 기존 저장소 선택 및 즉시 배포 요청에 따라 GitHub Pages를 게시했습니다. 기존 main과 로컬 develop의 작업 기록은 업로드하지 않았습니다.
-- 공개 페이지의 9개 HTML/CSS/JS/SVG가 HTTP 200이고 로컬 파일과 바이트 단위로 일치합니다. 공개 API 10개 카드가 있는 상태의 6폭/메뉴/테마 복원/폼을 확인했습니다.
+- 공개 페이지의 9개 HTML/CSS/JS/SVG가 HTTP 200이고 로컬 파일과 바이트 단위로 일치합니다. 최초 배포의 실제 10카드/6폭 검증에 이어 새 주소에서 실제 11카드/360·768·1280px 및 메뉴/테마 복원/폼을 재확인했습니다.
 - 공개 화면에서 정상 API 응답을 확인했습니다. 오류·빈 목록·403·재시도는 동일 소스의 로컬 제어 응답·자동 테스트 증거이며 공개 API를 고의로 실패시키지 않았습니다.
 - 원본 이력서·전화번호·미확정 프로젝트 기간·충돌하는 블로그 주소·실제 장비 접근 링크는 포함하지 않습니다.
 - 성과의 독립 재측정을 하지 않았고, AI 완료 ops/s와 HTTP req/s 또는 목표값을 혼동하는 숫자 주장은 넣지 않았습니다.

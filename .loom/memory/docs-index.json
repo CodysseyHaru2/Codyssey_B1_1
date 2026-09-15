@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-15T07:26:48+00:00",
+  "generated_at": "2026-09-15T07:46:09+00:00",
   "docs_paths": [
     "docs"
   ],
@@ -38,8 +38,8 @@
       "path": "docs/deployment.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-09-15T16:26:47+09:00",
-      "size_bytes": 7775
+      "updated_at": "2026-09-15T16:46:09+09:00",
+      "size_bytes": 11269
     },
     {
       "id": "docs/portfolio-spec.md",

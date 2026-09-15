@@ -2,13 +2,33 @@
 
 배포·확인일: 2026-09-15 (Asia/Seoul).
 
-- 공개 페이지: [홍용재 소개 페이지](https://codysseyharu2.github.io/Codyssey_B1_1/)
-- 저장소: [CodysseyHaru2/Codyssey_B1_1](https://github.com/CodysseyHaru2/Codyssey_B1_1)
-- 공개 소스: [codex/portfolio-pages](https://github.com/CodysseyHaru2/Codyssey_B1_1/tree/codex/portfolio-pages)
+- 공개 페이지: [홍용재 소개 페이지](https://develsvai.github.io/Codyssey_B1_1/)
+- 저장소: [develsvai/Codyssey_B1_1](https://github.com/develsvai/Codyssey_B1_1)
+- 공개 소스: [codex/portfolio-pages](https://github.com/develsvai/Codyssey_B1_1/tree/codex/portfolio-pages)
 - Pages source: `codex/portfolio-pages`, `/`, `legacy` 브랜치 게시 방식. HTTPS enforced=true, 커스텀 도메인 없음.
 - 최초 배포 커밋: `69600e80d99b0d7b58d113ffa114da6fcb6fede5`. Pages build는 `built`, error.message=null이었다.
-- 최종 제출 커밋: `ed53f3b4a3ec12ec44436a36a2080a46125cba97`. 공개 README의 실제 URL 및 공개 PNG 화면 3장을 포함한다.
-- 최종 Pages build: `built`, error.message=null, 2026-09-15T07:25:38Z. 공개 README/PNG 3장은 모두 HTTP 200, 배포 커밋 파일과 바이트 단위 일치, PNG MIME=image/png 확인.
+- 최초 배포 시 최종 제출 커밋: `ed53f3b4a3ec12ec44436a36a2080a46125cba97`. 당시 공개 README의 실제 URL 및 공개 PNG 화면 3장을 포함한다.
+- 최초 배포 Pages build: `built`, error.message=null, 2026-09-15T07:25:38Z. 당시 공개 README/PNG 3장은 모두 HTTP 200, 배포 커밋 파일과 바이트 단위 일치, PNG MIME=image/png 확인.
+
+## 소유자 이전 후 재배포 (현재)
+
+사용자가 소유자 변경 후 페이지가 내려갔다며 즉시 재배포를 지시했다. 실제 새 저장소는 develsvai/Codyssey_B1_1이며 PUBLIC, ADMIN 권한이 확인됐다. Pages 설정은 이미 새 주소와 기존 codex/portfolio-pages:/를 가리키고 있었다. 이전 소유자 Pages는 HTTP 404, 새 소유자 Pages는 초기 조회부터 HTTP 200이었다. 따라서 사이트 파일 유실이 아니라 이전 주소 접근과 제출 링크의 소유자 의존성을 확인했다.
+
+저장소 링크는 이전 시 리디렉션되지만 Pages 주소는 자동 리디렉션되지 않는다. [GitHub 저장소 이전 계약](https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository). 기존 주소에 새 저장소/프록시/리디렉션 서비스를 임의로 만들지 않았다.
+
+로컬 및 배포용 원격 URL을 실제 새 저장소로 갱신했고, 기존 공개 배포 브랜치 최신 상태를 fetch/fast-forward한 뒤 일반 commit/push한다. main=2c0f7981f19f265029cd0cf4f826ffef53629b59, develop=95c090796f67c6ab38abe265b3021e115785f28b는 사용자 변경 상태 그대로 보존한다.
+
+scripts/export-pages.cjs는 owner/repository를 인자로 받아 저장소 링크와 기대 Pages URL을 같은 값에서 계산하도록 보완했다. GitHub 메타데이터에서 확인한 실제 owner/repository와 Pages URL을 사용하며 선별 공개 파일 원칙은 유지한다.
+
+재배포 공개 커밋: `bfa9e4774a631192615265cfc8dd0bc11eb8cab4`. 기존 배포 브랜치를 일반 fast-forward push했고 공개 README와 새 주소 캡처 3장만 변경했다. 공개 앱 코드 9개는 이전 게시본과 동일하며 새 주소에서 HTTP 200/로컬 바이트 일치 확인. 배포 브랜치는 허용 파일 14개뿐이고 `.loom/project.md`, 원본 이력서 경로는 새 Pages에서도 404였다.
+
+최종 재배포 build는 `built`, error.message=null, 2026-09-15T07:44:35Z였다. 실제 새 주소의 README와 공개 PNG 3장도 HTTP 200이고 bfa9e47 배포 파일과 바이트 단위 일치, PNG MIME=image/png 확인. 공개 소스 브랜치 URL도 비인증 HTTP 200이었다. main/develop의 원격 SHA는 재배포 전후 동일했다.
+
+새 주소의 앱 브라우저에서 GitHub 저장소 11개(이전 후 이 저장소가 새 소유자 공개 목록에 추가됨), TinyPilot 및 Loom/DeepQuest 누락 안내를 확인했다. 360/768/1280px에서 실제 카드 11개 상태의 문서·카드 내부 가로 넘침/깨진 이미지 0. dark 전환 후 새로고침 복원, light 복원, 모바일 메뉴 열기/Escape 닫힘·포커스, 빈 폼 3오류/첫 필드 포커스/정상 입력 후 전송 없는 데모 성공 확인. 해당 시험 console error/warn=[]. 시험 값을 root 재이동으로 지웠고 viewport reset했다.
+
+Node 회귀 테스트 20/20, 배포 도구 syntax 및 git diff --check 통과. 새 주소에서 실제 공개 캡처 desktop/dark=1265×889, mobile=345×748을 갱신하고 시각 검사했다. 캡처 JPEG를 PNG 인코딩으로만 변환했고 실제 image 형식을 확인했다.
+
+아래 최초 배포·Chrome 검증 내용은 이전 소유자 게시 시점의 이력이다. 현재 복구에서 이를 새 Chrome 시험 성공으로 바꾸지 않는다.
 
 ## 승인과 공개 경계
 
@@ -69,7 +89,7 @@
 
 ## 재배포와 한계
 
-`scripts/export-pages.cjs`는 `mktemp -d /private/tmp/hyj-pages.XXXXXX`로 만든 디렉터리에 허용 파일만 복사하고 공개용 README를 생성한다. 검증된 위 Pages URL을 두 번째 인자로 전달하면 최종 화면 3장을 포함한다. 기존 배포 브랜치의 최신 상태를 받아 같은 선별 파일의 변경만 일반 commit/push한다. 로컬 develop 전체를 push하거나 force push하지 않는다.
+`scripts/export-pages.cjs`는 `mktemp -d /private/tmp/hyj-pages.XXXXXX`로 만든 디렉터리에 허용 파일만 복사하고 공개용 README를 생성한다. 두 번째 인자로 검증된 Pages URL, 세 번째 인자로 실제 owner/repository를 전달하면 최종 화면 3장을 포함한다. 현재 조합은 `https://develsvai.github.io/Codyssey_B1_1/`와 `develsvai/Codyssey_B1_1`이다. 기존 배포 브랜치의 최신 상태를 받아 같은 선별 파일의 변경만 일반 commit/push한다. 로컬 develop 전체를 push하거나 force push하지 않는다.
 
 Chrome 153.0.8010.36의 기능·반응형·콘솔 최종 시험은 이전 UI 제어 중단으로 미완료다. 기존 검증 Task는 07:20:12 UTC에 web-user가 확인 후 DONE으로 확정했으나 그 사용자 확정을 Chrome 자동 시험 성공으로 해석하지 않는다. 이번 공개 배포 검증은 앱 브라우저 근거다.
 
