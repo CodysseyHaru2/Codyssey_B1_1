@@ -4,7 +4,7 @@
   "title": "소유자 이전 후 GitHub Pages 주소·배포 설정 복구",
   "description": "사용자가 저장소 소유자를 변경한 뒤 페이지가 내려갔다며 현재 에이전트에게 재배포를 지시했다. 원격에서 실제 새 owner/repository와 Pages 설정·배포 브랜치를 확인하고 기존 소개 페이지의 선별 공개 자산을 새 소유자 GitHub Pages로 재게시한다. 소유자 기반 URL 및 배포 도구·README·배포 기록을 갱신하고 실제 외부 HTTPS 자산과 화면을 확인한다. 기존 브랜치와 사용자 변경을 보존한다.",
   "created_at": "2026-09-15T07:41:48+00:00",
-  "updated_at": "2026-09-15T07:42:11+00:00",
+  "updated_at": "2026-09-15T07:46:19+00:00",
   "order_index": 8,
   "legacy_task_id": "task-20260915-074148-github-pages-a18991f2",
   "depends_on": [

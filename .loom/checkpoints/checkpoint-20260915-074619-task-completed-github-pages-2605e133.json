@@ -1,0 +1,19 @@
+{
+  "id": "checkpoint-20260915-074619-task-completed-github-pages-2605e133",
+  "created_at": "2026-09-15T07:46:19+00:00",
+  "reason": "Task completed: 소유자 이전 후 GitHub Pages 주소·배포 설정 복구",
+  "summary": "소유자 이전 후 GitHub Pages 주소·배포 설정 복구 -> DONE @ develop/4b58bb040ad6",
+  "job_id": "job-20260915-060954-github-pages-4b0b3a3a",
+  "task_id": "task-20260915-074148-github-pages-a18991f2",
+  "commit_sha": "4b58bb040ad6fce07e9cc5c64993c0102f3227e9",
+  "branch_name": "develop",
+  "dirty": true,
+  "staged_files": [],
+  "modified_files": [
+    ".loom/job-runs/job-run-20260915-074211-job-20260915-060954-github-pages-4b0b3a3a-da336e2c/job-run.json",
+    ".loom/task-definitions/task-def-20260915-074148-github-pages-963ffc9f/task-definition.json"
+  ],
+  "untracked_files": [],
+  "snapshot_captured_at": "2026-09-15T07:46:19+00:00",
+  "rollback_strategy": "revert-or-branch"
+}

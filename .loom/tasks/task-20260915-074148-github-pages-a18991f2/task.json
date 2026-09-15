@@ -3,9 +3,9 @@
   "job_id": "job-20260915-060954-github-pages-4b0b3a3a",
   "title": "소유자 이전 후 GitHub Pages 주소·배포 설정 복구",
   "description": "사용자가 저장소 소유자를 변경한 뒤 페이지가 내려갔다며 현재 에이전트에게 재배포를 지시했다. 원격에서 실제 새 owner/repository와 Pages 설정·배포 브랜치를 확인하고 기존 소개 페이지의 선별 공개 자산을 새 소유자 GitHub Pages로 재게시한다. 소유자 기반 URL 및 배포 도구·README·배포 기록을 갱신하고 실제 외부 HTTPS 자산과 화면을 확인한다. 기존 브랜치와 사용자 변경을 보존한다.",
-  "status": "RUNNING",
+  "status": "DONE",
   "created_at": "2026-09-15T07:41:48+00:00",
-  "updated_at": "2026-09-15T07:42:11+00:00",
+  "updated_at": "2026-09-15T07:46:19+00:00",
   "order_index": 8,
   "assigned_agent": "codex",
   "depends_on": [
@@ -29,12 +29,26 @@
   "run_attempts": 0,
   "last_error": "",
   "commit_refs": [
-    "95c090796f67c6ab38abe265b3021e115785f28b"
+    "95c090796f67c6ab38abe265b3021e115785f28b",
+    "4b58bb040ad6fce07e9cc5c64993c0102f3227e9"
   ],
   "branch_name": "develop",
   "git_dirty": true,
-  "git_snapshot_captured_at": "2026-09-15T07:42:11+00:00",
-  "artifacts": [],
+  "git_snapshot_captured_at": "2026-09-15T07:46:19+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20260915-074148-github-pages-a18991f2/agent-events.jsonl",
+    ".loom/tasks/task-20260915-074148-github-pages-a18991f2/artifacts.json",
+    ".loom/tasks/task-20260915-074148-github-pages-a18991f2/context.md",
+    ".loom/tasks/task-20260915-074148-github-pages-a18991f2/decision.md",
+    ".loom/tasks/task-20260915-074148-github-pages-a18991f2/git-snapshot.json",
+    ".loom/tasks/task-20260915-074148-github-pages-a18991f2/logs.txt",
+    ".loom/tasks/task-20260915-074148-github-pages-a18991f2/previous-results.md",
+    ".loom/tasks/task-20260915-074148-github-pages-a18991f2/prompt.md",
+    ".loom/tasks/task-20260915-074148-github-pages-a18991f2/result.md",
+    ".loom/tasks/task-20260915-074148-github-pages-a18991f2/troubleshooting.md",
+    "README.md",
+    "docs/deployment.md"
+  ],
   "source_proposal_id": "",
   "source_prompt": ""
 }
