@@ -4,7 +4,7 @@
   "title": "문의 폼 입력·검증·성공 상태와 공개 연락 채널 구현",
   "description": "Contact의 이름/이메일/메시지 필드에 연결된 label과 필드별 오류 표시를 구현한다. input 이벤트에서 입력/유효성 상태를 변경하고 오류를 갱신하며 submit에서 event.preventDefault() 후 전체 필수값과 이메일 형식을 검사한다. 공백만 있는 이름/메시지도 빈 값으로 처리한다. 오류 문구는 '이름을 입력해주세요', '올바른 이메일 주소를 입력해주세요', '메시지를 입력해주세요'로 구성한다. 오류와 입력 요소는 aria-describedby/aria-invalid 등으로 연결하고 성공/오류 상태는 읽을 수 있게 알린다. 기본 구현은 실제 전송 없는 학습용 폼이다. 입력 확인 버튼, '현재 메시지는 실제로 전송되지 않습니다' 안내와 성공 '입력 내용을 확인했습니다. 이 데모에서는 메시지가 실제로 전송되지 않습니다'를 사용해 거짓 전송 완료를 표시하지 않는다. 공개 사이트와 일치하는 이메일 mailto 및 GitHub, 확정된 LinkedIn/Blog 채널을 연결하고 전화번호는 기본 노출하지 않는다. 입력 내용을 외부 서버나 localStorage에 저장/전송하지 않는다.",
   "created_at": "2026-09-15T06:11:30+00:00",
-  "updated_at": "2026-09-15T07:05:24+00:00",
+  "updated_at": "2026-09-15T07:06:53+00:00",
   "order_index": 5,
   "legacy_task_id": "task-20260915-061130-task-10051e94",
   "depends_on": [
@@ -19,7 +19,7 @@
   "memory_refs": [],
   "document_outputs": [],
   "document_output_exceptions": [],
-  "default_agent": "",
+  "default_agent": "codex",
   "context_policy_id": "",
   "executor_policy_id": "",
   "review_policy": "",
