@@ -2,9 +2,9 @@
   "id": "task-run-20260915-083123-task-def-20260915-082947-15-markdown-9d1a7676-6f17d987",
   "job_run_id": "job-run-20260915-083123-job-20260915-060954-github-pages-4b0b3a3a-72216f1a",
   "task_definition_id": "task-def-20260915-082947-15-markdown-9d1a7676",
-  "status": "RUNNING",
+  "status": "DONE",
   "created_at": "2026-09-15T08:31:23+00:00",
-  "updated_at": "2026-09-15T08:31:23+00:00",
+  "updated_at": "2026-09-15T08:34:10+00:00",
   "legacy_task_id": "task-20260915-082947-15-markdown-d8f22852",
   "attempt": 1,
   "assigned_agent": "codex",
@@ -13,13 +13,30 @@
   "lease_expires_at": "",
   "queued_at": "",
   "started_at": "2026-09-15T08:31:23+00:00",
-  "completed_at": "",
+  "completed_at": "2026-09-15T08:34:10+00:00",
   "last_error": "",
-  "commit_refs": [],
-  "branch_name": "",
-  "git_dirty": false,
-  "git_snapshot_captured_at": "",
-  "artifacts": [],
-  "checkpoint_ids": [],
+  "commit_refs": [
+    "5fb0df08bfb40aa4841c07d7405b6acaaa99429e",
+    "eb7cffd0e08a7741a8c47387a8c4048806cd3e0f"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-09-15T08:34:10+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20260915-082947-15-markdown-d8f22852/agent-events.jsonl",
+    ".loom/tasks/task-20260915-082947-15-markdown-d8f22852/artifacts.json",
+    ".loom/tasks/task-20260915-082947-15-markdown-d8f22852/context.md",
+    ".loom/tasks/task-20260915-082947-15-markdown-d8f22852/decision.md",
+    ".loom/tasks/task-20260915-082947-15-markdown-d8f22852/git-snapshot.json",
+    ".loom/tasks/task-20260915-082947-15-markdown-d8f22852/logs.txt",
+    ".loom/tasks/task-20260915-082947-15-markdown-d8f22852/previous-results.md",
+    ".loom/tasks/task-20260915-082947-15-markdown-d8f22852/prompt.md",
+    ".loom/tasks/task-20260915-082947-15-markdown-d8f22852/result.md",
+    ".loom/tasks/task-20260915-082947-15-markdown-d8f22852/troubleshooting.md",
+    "docs/assessment-qa.md"
+  ],
+  "checkpoint_ids": [
+    "checkpoint-20260915-083410-task-completed-15-markdown-fd5599da"
+  ],
   "review_required_reason": ""
 }
