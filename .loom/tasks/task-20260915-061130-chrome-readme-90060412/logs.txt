@@ -9,3 +9,4 @@ README/source documentation and docs index updated. No push or public deployment
 [2026-09-15T07:16:07+00:00] agent=codex task=task-20260915-061130-chrome-readme-90060412 Foreground task session started.
 Follow-up Chrome observation: actual 6-section document, 10 public repositories and Hero screen observed. Task reopened; UI control interrupted during functional test, further actions stopped. Chrome functional/responsive/console checks remain incomplete.
 Validation result: no source code changes; git diff --check PASS. Contact evidence supplement is now DONE. Local preview remains available; no push/public deployment.
+[2026-09-15T07:17:07+00:00] agent=codex task=task-20260915-061130-chrome-readme-90060412 Chrome 문서와 실 API 10카드는 확인됐지만 제어 중단으로 기능·반응형·콘솔 최종 검증 미완료. 안정된 제어 환경에서 재확인 필요
