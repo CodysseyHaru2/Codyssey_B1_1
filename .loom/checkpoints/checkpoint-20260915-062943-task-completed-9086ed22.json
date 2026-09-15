@@ -1,0 +1,19 @@
+{
+  "id": "checkpoint-20260915-062943-task-completed-9086ed22",
+  "created_at": "2026-09-15T06:29:43+00:00",
+  "reason": "Task completed: 메뉴·테마·스크롤의 이벤트-상태-렌더링 인터랙션 구현",
+  "summary": "메뉴·테마·스크롤의 이벤트-상태-렌더링 인터랙션 구현 -> DONE @ develop/632add47311c",
+  "job_id": "job-20260915-060954-github-pages-4b0b3a3a",
+  "task_id": "task-20260915-061129-task-1b697181",
+  "commit_sha": "632add47311cbf5c0f912d3554b118f6e2ab8ded",
+  "branch_name": "develop",
+  "dirty": true,
+  "staged_files": [],
+  "modified_files": [
+    ".loom/job-runs/job-run-20260915-061556-job-20260915-060954-github-pages-4b0b3a3a-2c597ae1/job-run.json",
+    ".loom/task-definitions/task-def-20260915-061129-task-def-7345484c/task-definition.json"
+  ],
+  "untracked_files": [],
+  "snapshot_captured_at": "2026-09-15T06:29:43+00:00",
+  "rollback_strategy": "revert-or-branch"
+}

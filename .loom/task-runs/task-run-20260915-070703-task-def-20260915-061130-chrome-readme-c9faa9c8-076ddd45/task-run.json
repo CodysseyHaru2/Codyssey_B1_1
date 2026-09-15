@@ -1,0 +1,46 @@
+{
+  "id": "task-run-20260915-070703-task-def-20260915-061130-chrome-readme-c9faa9c8-076ddd45",
+  "job_run_id": "job-run-20260915-061556-job-20260915-060954-github-pages-4b0b3a3a-2c597ae1",
+  "task_definition_id": "task-def-20260915-061130-chrome-readme-c9faa9c8",
+  "status": "DONE",
+  "created_at": "2026-09-15T07:07:03+00:00",
+  "updated_at": "2026-09-15T07:20:12+00:00",
+  "legacy_task_id": "task-20260915-061130-chrome-readme-90060412",
+  "attempt": 1,
+  "assigned_agent": "web-user",
+  "worker_id": "",
+  "heartbeat_at": "",
+  "lease_expires_at": "",
+  "queued_at": "",
+  "started_at": "2026-09-15T07:07:03+00:00",
+  "completed_at": "2026-09-15T07:20:12+00:00",
+  "last_error": "",
+  "commit_refs": [
+    "11615b84b68fae4c9d3aa49485114b1dbb67fdea",
+    "76b398941114a733158ed6189e0750ccfbaa81d7",
+    "b7c0bdc75fbf401836e68d888776a9731338f9cf",
+    "d506d7c893ef6c4ea9599916849c0134e3f50aeb",
+    "fb2ae902b2bc821d3c7bdf2ac2fb1eb7f3d9e1a1"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-09-15T07:20:12+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20260915-061130-chrome-readme-90060412/agent-events.jsonl",
+    ".loom/tasks/task-20260915-061130-chrome-readme-90060412/artifacts.json",
+    ".loom/tasks/task-20260915-061130-chrome-readme-90060412/context.md",
+    ".loom/tasks/task-20260915-061130-chrome-readme-90060412/decision.md",
+    ".loom/tasks/task-20260915-061130-chrome-readme-90060412/git-snapshot.json",
+    ".loom/tasks/task-20260915-061130-chrome-readme-90060412/logs.txt",
+    ".loom/tasks/task-20260915-061130-chrome-readme-90060412/previous-results.md",
+    ".loom/tasks/task-20260915-061130-chrome-readme-90060412/prompt.md",
+    ".loom/tasks/task-20260915-061130-chrome-readme-90060412/result.md",
+    ".loom/tasks/task-20260915-061130-chrome-readme-90060412/troubleshooting.md",
+    "README.md",
+    "docs/verification.md"
+  ],
+  "checkpoint_ids": [
+    "checkpoint-20260915-072012-task-completed-chrome-readme-148116c9"
+  ],
+  "review_required_reason": ""
+}

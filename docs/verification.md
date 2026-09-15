@@ -1,0 +1,102 @@
+# 소개 페이지 구현·검증 기록
+
+시험일: 2026-09-15 (Asia/Seoul). 아래 본문은 로컬 `http://127.0.0.1:4173/` 시험 이력이다. 후속 공개 Pages 시험은 [배포 검증 기록](deployment.md)에 별도로 기록했다. 화면 파일 3장은 후속 Task에서 실제 공개 페이지 캡처로 갱신했다.
+
+## 환경과 판정 원칙
+
+- 앱 브라우저: 실제 DOM/AX/화면 및 viewport 제어로 검증. 엔진 버전은 확인할 수 없어 기재하지 않는다.
+- Chrome: 설치 메타데이터 버전 153.0.8010.36. 초기 주소 입력·재로딩에서는 빈 화면이었다. 후속 관찰에서 실제 6영역 문서와 저장소 10개의 AX 및 Hero 화면은 확인했다. 그러나 기능 시험 중 UI 제어가 중단됐으므로 기능·반응형·콘솔 **최종 검증은 미완료**다. 앱 브라우저 결과를 Chrome PASS로 쓰지 않는다.
+- Node 24.19.0의 내장 테스트/VM 사용. 실제 브라우저를 대체하지 않는 로직 시험이다.
+- PASS는 아래 방식으로 확인한 항목에만 적용한다. 미검증은 불합격 또는 합격으로 바꾸지 않는다.
+
+## 검증 결과
+
+`node --check` 3파일 및 `git diff --check` 통과. `node --test tests/*.test.cjs` **20개 통과 / 0개 실패**.
+
+| ID | 필수 요구사항 | 코드·시험 근거 | 판정 |
+| --- | --- | --- | --- |
+| R1 | 기본 구조·외부 CSS/defer JS·실행 안내 | index.html/css/js/images, structure test, README Live Server 안내, 로컬 HTTP 200 | PASS (로컬) |
+| R2 | 6영역·시맨틱·앵커·alt·label | structure test, 실제 DOM의 고유 ID/label 연결/이미지, 앱 AX | PASS |
+| R3 | 변수·dark·Flex/Grid·반응형·hover/transition/shadow | style.css, structure test, 아래 실제/대체 성공 6폭 점검·라이트/다크 캡처 | PASS (앱/QA 대체 응답) |
+| R4 | DOM 선택·이벤트·preventDefault·금지 코드 없음 | 3 JS, structure test, 실제 메뉴/폼 click/input/submit/scroll | PASS |
+| R5 | 메뉴·smooth·top·nav·theme·Observer | UI test 5개, 앱에서 테마 복원/메뉴 닫기/앵커/상단/등장 확인 | PASS (앱/로직) |
+| R6 | 필수값·이메일·인접 오류·성공 | contact test 4개, 앱에서 빈 제출·잘못된 이메일·수정·데모 성공과 포커스 | PASS |
+| R7 | ES6+ | map/template/destructuring으로 카드 생성, const/let·화살표·forEach 실제 사용, structure test | PASS |
+| R8 | fetch/비동기·4상태·403/재시도 | projects test 6개, 공개 API curl 및 앱 실 성공 10개, 이후 제한/재시도 안내 | PASS (앱/로직) |
+| R9 | 최소 3개 상태→렌더 | README 테마/API/폼 흐름 표와 함수, 위 상태 시험 | PASS |
+| R10 | GitHub Pages·README·URL·3캡처 제출 | 당시 로컬 캡처만 작성. 후속 배포 Task에서 실제 Pages/공개 소스 URL과 공개 화면 3장을 확인 | PASS (후속 공개 배포 근거 참조) |
+
+공개 배포/제출 URL은 후속 Task에서 확인됐다. **Chrome 최종 기능 검증은 미완료**이며 사용자 UI의 검증 Task 완료 확정과 실제 시험 근거를 구분한다.
+
+## 실제 반응형 경계
+
+새 코드 로드 후 앱 브라우저에서 각 폭을 설정하고 실제 innerWidth를 확인했다. 페이지 전체 문서 폭은 clientWidth와 같았다. 15px 차이는 세로 스크롤바 공간이며 가로 넘침이 아니다.
+
+| CSS viewport 폭 | clientWidth / documentWidth | nav / 메뉴 버튼 | 섹션 간격 | 이미지/label |
+| --- | --- | --- | --- | --- |
+| 360 | 345 / 345 | none / flex | 5rem | 깨짐 없음 / 연결 정상 |
+| 767 | 752 / 752 | none / flex | 5rem | 깨짐 없음 / 연결 정상 |
+| 768 | 753 / 753 | flex / none | 6rem | 깨짐 없음 / 연결 정상 |
+| 1023 | 1008 / 1008 | flex / none | 6rem | 깨짐 없음 / 연결 정상 |
+| 1024 | 1009 / 1009 | flex / none | 7rem | 깨짐 없음 / 연결 정상 |
+| 1280 | 1265 / 1265 | flex / none | 7rem | 깨짐 없음 / 연결 정상 |
+
+이 실제 API 6폭 시험에서는 요청 제한 상태여서 카드 수 0이었다. 카드 10개가 있는 실 응답 화면은 앞선 앱 시험에서 확인했다. API를 반복 호출하는 대신 QA 전용 서버의 4카드 대체 성공 응답으로 6폭을 추가 검증했다. 긴 이름·누락값·fork·TinyPilot 이미지가 포함되며 사용자 실 프로젝트 4개라는 뜻이 아니다. 임시 viewport는 reset했다.
+
+| QA 성공 viewport | 카드 수 | 카드 폭 | 카드 내부 가로 넘침 | 문서 넘침 |
+| --- | --- | --- | --- | --- |
+| 360 | 4 | 305px | 0개 | 없음 |
+| 767 | 4 | 344px | 0개 | 없음 |
+| 768 | 4 | 332.5px | 0개 | 없음 |
+| 1023 | 4 | 460px | 0개 | 없음 |
+| 1024 | 4 | 460.5px | 0개 | 없음 |
+| 1280 | 4 | 약 378.66px | 0개 | 없음 |
+
+## 자동 상태 시험의 범위
+
+| 시험 파일 | 건수 | 재현·확인 |
+| --- | --- | --- |
+| ui.test.cjs | 5 | 테마 저장/복원/저장 차단, 메뉴/Escape/앵커/데스크톱 복귀, 59↔60/299↔300, top 이동, Observer 0.2와 reduced-motion/미지원 |
+| projects.test.cjs | 6 | 지연 loading→success, 대표 순서·미일치·누락값·fork, []/HTTP500/403/429/네트워크/잘못된 응답, 중복 재시도, 악성 HTML/URL, 페이지네이션·중복·비공개 제외 |
+| contact.test.cjs | 4 | 초기/빈·공백·부분/잘못된 이메일·수정, 정상/반복 데모 확인·성공 해제, input 없는 자동 완성 |
+| structure.test.cjs | 5 | 시맨틱/6영역/ID·앵커, 외부 defer/자산/alt, label/필수/오류·전송 없음, CSS 조건, DOM/이벤트/ES6·금지 패턴 |
+
+대체 응답은 테스트 VM과 별도 localhost QA 서버에서만 제공한다. 운영 사이트에 성공 fixture·토큰·상태 시험 스위치를 넣지 않았다. VM 시험은 실제 HTML 레이아웃·브라우저 네트워크·보조기기의 읽기 경험을 증명하지 않는다.
+
+`tests/browser-server.cjs`는 4174의 허용된 시험 경로/자산만 제공하고 메모리에서 endpoint만 바꾼다. 실제 js/projects.js를 수정하지 않는다. 앱 브라우저에서 success=4카드, empty=빈 안내/0카드, HTTP500=오류+재시도, HTTP403=제한+재시도, loading=로딩/aria-busy=true를 확인했다. 모바일 Escape는 메뉴 닫힘과 menu-toggle 포커스를 확인했다. 시험 탭과 QA 서버는 종료했다.
+
+## 실제 앱 브라우저 기능 기록
+
+- dark 클릭 후 data-theme=dark/안내=라이트 전환을 확인하고 새로고침 후 유지. light로 복원.
+- 360px에서 메뉴 active/aria-expanded=true, 소개 링크 선택 후 false 및 섹션 포커스·hash 확인.
+- 소개 이동 후 scrolled 헤더/상단 버튼/등장 visible 확인. 상단 버튼 클릭의 브랜드 포커스 확인.
+- 빈 폼 제출: 이름/이메일/메시지 3오류와 첫 필드 포커스. 부분 수정 후 이메일 오류만 유지. 정상 수정 후 전송되지 않는 데모 성공 확인.
+- 같은 시험에서 공개 GitHub 10개 및 TinyPilot-KVM-Docker 이미지·설명·C·스타0·링크가 실제 표시됐다. Loom/DeepQuest 미포함 안내도 확인했다.
+- 폼/성공 API 시험의 console error/warn 로그는 `[]`였다. 이후 최종 로드에서 요청 제한 안내와 재시도 버튼을 확인했고 재시도 후에도 제한 안내였다. 모든 환경·모든 시간에 콘솔이 비었다고 주장하지 않는다.
+- 최종 Hero 라이트/모바일/다크 화면을 시각 검사해 제목·CTA·메뉴·테마 버튼의 잘림이 없음을 확인했다.
+
+## Chrome 후속 관찰
+
+전달 전 재관찰에서 Chrome에 실제 문서/6영역/공개 저장소 10개/TinyPilot 설명과 이미지/데모 폼이 나타났다. Hero 화면도 확인했다. 빈 화면은 당시 관찰 이력이며 계속 빈 화면이라고 단정하지 않는다. 미완료 검증 Task를 다시 열어 기능 확인을 시도했으나 브라우저 제어가 중단돼 이후 동작을 수행하지 않았다. Chrome 빈 폼 제출·테마 복원·6폭·콘솔을 확인했다고 기록하지 않는다. 사용자가 제어 중인 창/탭을 강제로 닫거나 설정을 바꾸지 않았다.
+
+## 캡처 증거
+
+- [desktop.png](screenshots/desktop.png): 1280×900 viewport의 Hero 라이트.
+- [mobile.png](screenshots/mobile.png): 360×780 viewport의 Hero 라이트.
+- [dark.png](screenshots/dark.png): 1280×900 viewport의 Hero 다크.
+
+위 설명은 로컬 시험 당시 캡처 이력이다. 현재 같은 파일명 3장은 후속 Task의 실제 GitHub Pages Hero 캡처로 갱신했다. 최종 형식과 크기는 실제 PNG desktop/dark=1265×889, mobile=345×748이며 배포 기록에서 확인할 수 있다. Chrome 화면 또는 API 성공 카드의 캡처로 표시하지 않는다. 실제 인물 사진/운영 화면/실측 성과 도표가 아닌 HYJ 및 구조 요약 SVG를 사용한다.
+
+## 콘텐츠·공개 범위
+
+이력서와 기존 사이트가 제공한 직무·기술·프로젝트 역할을 사용했다. 기간과 블로그 주소가 충돌해 생략했다. 전화번호/원본 이력서 다운로드/실제 장비 제어 주소는 없다. AI ops/s와 HTTP req/s를 합산하거나 목표 처리량을 성과로 표현하지 않았다. 성과의 독립 재측정도 수행하지 않았다.
+
+공개 API에는 Loom/DeepQuest가 없으므로 대표 카드 성공 데이터를 하드코딩하지 않는다. 이들의 경험은 About/Skills의 출처 있는 설명에 남긴다. 공개 전 이들을 별도 사례 소개로 확장할지는 후속 사용자 결정이다.
+
+## 남은 제출·확인
+
+1. 안정된 Chrome에서 6폭과 성공 카드·메뉴·테마 복원·Observer·폼·콘솔을 확인하고 실제 버전/결과 기록.
+2. 저장소/공개 범위 선택 및 배포는 후속 사용자 승인에 따라 완료. 기존 main과 로컬 develop의 이력은 업로드하지 않음.
+3. 공개 자산 선별 및 `.loom`·PDF·작업 로그 제외 확인 완료.
+4. 실제 공개 소스/Pages URL·상대 자산·핵심 동작 확인 및 README 갱신 완료.
+5. 제출용 3캡처를 실제 공개 페이지에서 갱신하고 로컬 시험 이력과 구분함.

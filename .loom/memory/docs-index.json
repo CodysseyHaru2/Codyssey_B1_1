@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-15T07:26:48+00:00",
+  "docs_paths": [
+    "docs"
+  ],
+  "documents": [
+    {
+      "id": ".loom/memory/README.md",
+      "title": "Loom Memory",
+      "path": ".loom/memory/README.md",
+      "source": "memory",
+      "document_type": "memory",
+      "updated_at": "2026-09-14T16:35:50+09:00",
+      "size_bytes": 202
+    },
+    {
+      "id": ".loom/memory/categories.json",
+      "title": "{",
+      "path": ".loom/memory/categories.json",
+      "source": "memory",
+      "document_type": "memory",
+      "updated_at": "2026-09-14T16:35:50+09:00",
+      "size_bytes": 1484
+    },
+    {
+      "id": ".loom/memory/principles.md",
+      "title": "Principles",
+      "path": ".loom/memory/principles.md",
+      "source": "memory",
+      "document_type": "principles",
+      "updated_at": "2026-09-14T16:35:50+09:00",
+      "size_bytes": 82
+    },
+    {
+      "id": "docs/deployment.md",
+      "title": "GitHub Pages 배포 기록",
+      "path": "docs/deployment.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-09-15T16:26:47+09:00",
+      "size_bytes": 7775
+    },
+    {
+      "id": "docs/portfolio-spec.md",
+      "title": "홍용재 소개 포트폴리오 명세",
+      "path": "docs/portfolio-spec.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-09-15T15:17:33+09:00",
+      "size_bytes": 19524
+    },
+    {
+      "id": "docs/verification.md",
+      "title": "소개 페이지 구현·검증 기록",
+      "path": "docs/verification.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-09-15T16:25:11+09:00",
+      "size_bytes": 10121
+    }
+  ],
+  "path": "/Users/hongyongjae/Desktop/Codyssey_B1_1/.loom/memory/docs-index.json"
+}

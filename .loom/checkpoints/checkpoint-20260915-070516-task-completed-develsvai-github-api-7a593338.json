@@ -1,0 +1,19 @@
+{
+  "id": "checkpoint-20260915-070516-task-completed-develsvai-github-api-7a593338",
+  "created_at": "2026-09-15T07:05:16+00:00",
+  "reason": "Task completed: develsvai GitHub API와 대표 프로젝트 콘텐츠를 결합한 상태별 카드 구현",
+  "summary": "develsvai GitHub API와 대표 프로젝트 콘텐츠를 결합한 상태별 카드 구현 -> DONE @ develop/444b5f1234fb",
+  "job_id": "job-20260915-060954-github-pages-4b0b3a3a",
+  "task_id": "task-20260915-061130-develsvai-github-api-695f7f48",
+  "commit_sha": "444b5f1234fb4d55da6a2f2b5dcc468a376a03e3",
+  "branch_name": "develop",
+  "dirty": true,
+  "staged_files": [],
+  "modified_files": [
+    ".loom/job-runs/job-run-20260915-061556-job-20260915-060954-github-pages-4b0b3a3a-2c597ae1/job-run.json",
+    ".loom/task-definitions/task-def-20260915-061130-develsvai-github-api-bc026c2c/task-definition.json"
+  ],
+  "untracked_files": [],
+  "snapshot_captured_at": "2026-09-15T07:05:16+00:00",
+  "rollback_strategy": "revert-or-branch"
+}
