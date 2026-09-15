@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-15T07:13:13+00:00",
+  "generated_at": "2026-09-15T07:17:04+00:00",
   "docs_paths": [
     "docs"
   ],
@@ -47,8 +47,8 @@
       "path": "docs/verification.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-09-15T16:12:42+09:00",
-      "size_bytes": 9036
+      "updated_at": "2026-09-15T16:17:03+09:00",
+      "size_bytes": 9792
     }
   ],
   "path": "/Users/hongyongjae/Desktop/Codyssey_B1_1/.loom/memory/docs-index.json"
