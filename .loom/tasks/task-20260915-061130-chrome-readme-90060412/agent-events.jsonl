@@ -1,1 +1,2 @@
 {"id": "event-b6d528c21644", "type": "foreground_session_started", "message": "Foreground task session started.", "created_at": "2026-09-15T07:07:04+00:00", "agent": "codex", "task_id": "task-20260915-061130-chrome-readme-90060412"}
+{"id": "event-fccddb7f6092", "type": "foreground_session_review_required", "message": "앱·자동 검증과 문서·3캡처 완료. Chrome은 빈 화면으로 미검증이므로 안정된 Chrome에서 실제 기능과 콘솔 확인 필요", "created_at": "2026-09-15T07:13:56+00:00", "agent": "codex", "task_id": "task-20260915-061130-chrome-readme-90060412"}

@@ -5,3 +5,4 @@ App browser QA: loading/empty/500/403 UI and mobile Escape/focus PASS. QA tab/se
 Actual local screenshots saved and visually verified: desktop/dark 1265x889, mobile 345x748.
 Chrome 153.0.8010.36 native attempt: URL loaded but blank content after reload. Functional/visual Chrome verification incomplete.
 README/source documentation and docs index updated. No push or public deployment.
+[2026-09-15T07:13:56+00:00] agent=codex task=task-20260915-061130-chrome-readme-90060412 앱·자동 검증과 문서·3캡처 완료. Chrome은 빈 화면으로 미검증이므로 안정된 Chrome에서 실제 기능과 콘솔 확인 필요
