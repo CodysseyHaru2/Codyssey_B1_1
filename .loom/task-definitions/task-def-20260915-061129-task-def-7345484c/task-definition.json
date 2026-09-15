@@ -4,7 +4,7 @@
   "title": "메뉴·테마·스크롤의 이벤트-상태-렌더링 인터랙션 구현",
   "description": "정적 페이지에 querySelector/querySelectorAll과 addEventListener를 사용한다. 모바일 햄버거의 메뉴 상태를 classList.toggle('active')로 렌더링하고 링크 선택/닫기/Escape 시 정리한다. 내비게이션 클릭의 기본 동작을 제어해 부드럽게 섹션 이동한다. scroll 이벤트에서 60px 이상 내비게이션 배경 변경, 300px 이상 맨 위로 버튼 표시 및 클릭 시 상단 이동을 구현한다. 테마 상태를 light/dark로 유지하고 data-theme 및 버튼 안내를 갱신하며 localStorage 저장/새로고침 복원을 제공한다. 저장소 접근 실패 시 기본 테마로 정상 동작한다. Intersection Observer threshold 0.2로 섹션/카드 등장 애니메이션을 구현하고 prefers-reduced-motion 사용자에게 불필요한 움직임을 줄인다. const/let, 화살표 함수, forEach, textContent, classList.add/remove/toggle를 적절히 사용한다. 상태 수정과 DOM 렌더링을 구분해 설명 가능한 작은 함수로 구성하고 기준값을 README에 기록할 수 있도록 명세에 남긴다.",
   "created_at": "2026-09-15T06:11:29+00:00",
-  "updated_at": "2026-09-15T06:26:19+00:00",
+  "updated_at": "2026-09-15T06:29:43+00:00",
   "order_index": 3,
   "legacy_task_id": "task-20260915-061129-task-1b697181",
   "depends_on": [
@@ -19,7 +19,7 @@
   "memory_refs": [],
   "document_outputs": [],
   "document_output_exceptions": [],
-  "default_agent": "",
+  "default_agent": "codex",
   "context_policy_id": "",
   "executor_policy_id": "",
   "review_policy": "",
