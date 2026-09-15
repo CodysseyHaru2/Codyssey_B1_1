@@ -3,7 +3,7 @@
 Backend / AI Platform Engineer 홍용재의 반응형 단일 페이지입니다. 순수 HTML5, CSS3, JavaScript ES6+로 구현했습니다.
 
 - 저장소: [CodysseyHaru2/Codyssey_B1_1](https://github.com/CodysseyHaru2/Codyssey_B1_1/tree/codex/portfolio-pages)
-- 공개 페이지: 게시 확인 중
+- 공개 페이지: [소개 페이지](https://codysseyharu2.github.io/Codyssey_B1_1/)
 - 원본 PDF, 전화번호, 작업 기록, API 토큰, 내부 장비 주소는 배포에 포함하지 않습니다.
 
 ## 구조와 실행
@@ -29,3 +29,13 @@ Hero / About / Skills / Projects / Contact / Footer를 갖췄으며 CSS 변수, 
 문의 폼은 학습용이며 **실제로 전송되지 않습니다**. 실제 연락은 페이지의 공개 이메일 링크를 사용합니다. GitHub API는 비인증 요청 제한이 있으며 토큰을 공개하지 않습니다. 실제 응답에 없는 Loom/DeepQuest 카드를 만들지 않고 누락을 안내합니다. 이미지들은 실제 운영 화면이 아닌 이니셜과 구조 요약도입니다.
 
 2026-09-15 로컬 Node 내장 자동 테스트 20/20 통과 및 앱 브라우저 반응형·상태 UI 확인. 앱 브라우저 결과를 Chrome 결과로 대신하지 않으며 **Chrome 기능·반응형·콘솔 최종 검증은 미완료**입니다.
+
+## 공개 페이지 캡처
+
+실제 GitHub Pages를 앱 브라우저에서 캡처했습니다. Chrome 캡처가 아닙니다.
+
+![데스크톱](docs/screenshots/desktop.png)
+
+![모바일](docs/screenshots/mobile.png)
+
+![다크 모드](docs/screenshots/dark.png)
