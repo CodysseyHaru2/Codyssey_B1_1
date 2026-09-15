@@ -2,8 +2,8 @@
 
 Backend / AI Platform Engineer 홍용재의 반응형 단일 페이지입니다. 순수 HTML5, CSS3, JavaScript ES6+로 구현했습니다.
 
-- 저장소: [CodysseyHaru2/Codyssey_B1_1](https://github.com/CodysseyHaru2/Codyssey_B1_1/tree/codex/portfolio-pages)
-- 공개 페이지: [소개 페이지](https://codysseyharu2.github.io/Codyssey_B1_1/)
+- 저장소: [develsvai/Codyssey_B1_1](https://github.com/develsvai/Codyssey_B1_1/tree/codex/portfolio-pages)
+- 공개 페이지: [소개 페이지](https://develsvai.github.io/Codyssey_B1_1/)
 - 원본 PDF, 전화번호, 작업 기록, API 토큰, 내부 장비 주소는 배포에 포함하지 않습니다.
 
 ## 구조와 실행
