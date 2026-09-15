@@ -1,0 +1,22 @@
+{
+  "before": {
+    "available": true,
+    "branch_name": "develop",
+    "commit_sha": "5fb0df08bfb40aa4841c07d7405b6acaaa99429e",
+    "dirty": true,
+    "staged_files": [],
+    "modified_files": [
+      ".loom/events.jsonl",
+      ".loom/jobs/job-20260915-060954-github-pages-4b0b3a3a/job.json",
+      ".loom/jobs/job-20260915-060954-github-pages-4b0b3a3a/notes.md"
+    ],
+    "untracked_files": [
+      ".loom/job-runs/job-run-20260915-083123-job-20260915-060954-github-pages-4b0b3a3a-72216f1a/",
+      ".loom/task-definitions/task-def-20260915-082947-15-markdown-9d1a7676/",
+      ".loom/task-runs/task-run-20260915-083123-task-def-20260915-082947-15-markdown-9d1a7676-6f17d987/",
+      ".loom/tasks/task-20260915-082947-15-markdown-d8f22852/"
+    ],
+    "captured_at": "2026-09-15T08:31:23+00:00"
+  },
+  "after": null
+}
