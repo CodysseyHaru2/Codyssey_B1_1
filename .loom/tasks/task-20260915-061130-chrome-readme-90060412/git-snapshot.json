@@ -16,14 +16,28 @@
   "after": {
     "available": true,
     "branch_name": "develop",
-    "commit_sha": "fb2ae902b2bc821d3c7bdf2ac2fb1eb7f3d9e1a1",
+    "commit_sha": "11615b84b68fae4c9d3aa49485114b1dbb67fdea",
     "dirty": true,
     "staged_files": [],
     "modified_files": [
+      ".loom/events.jsonl",
       ".loom/job-runs/job-run-20260915-061556-job-20260915-060954-github-pages-4b0b3a3a-2c597ae1/job-run.json",
-      ".loom/task-definitions/task-def-20260915-061130-chrome-readme-c9faa9c8/task-definition.json"
+      ".loom/jobs/job-20260915-060954-github-pages-4b0b3a3a/job.json",
+      ".loom/jobs/job-20260915-060954-github-pages-4b0b3a3a/notes.md",
+      ".loom/task-definitions/task-def-20260915-061130-chrome-readme-c9faa9c8/task-definition.json",
+      ".loom/task-definitions/task-def-20260915-061130-github-pages-url-8631f0ca/task-definition.json",
+      ".loom/tasks/task-20260915-061130-github-pages-url-d919212a/artifacts.json",
+      ".loom/tasks/task-20260915-061130-github-pages-url-d919212a/context.md",
+      ".loom/tasks/task-20260915-061130-github-pages-url-d919212a/git-snapshot.json",
+      ".loom/tasks/task-20260915-061130-github-pages-url-d919212a/logs.txt",
+      ".loom/tasks/task-20260915-061130-github-pages-url-d919212a/previous-results.md",
+      ".loom/tasks/task-20260915-061130-github-pages-url-d919212a/prompt.md",
+      ".loom/tasks/task-20260915-061130-github-pages-url-d919212a/task.json"
     ],
-    "untracked_files": [],
-    "captured_at": "2026-09-15T07:17:07+00:00"
+    "untracked_files": [
+      ".loom/task-runs/task-run-20260915-072007-task-def-20260915-061130-github-pages-url-8631f0-4e03b0cf/",
+      ".loom/tasks/task-20260915-061130-github-pages-url-d919212a/agent-events.jsonl"
+    ],
+    "captured_at": "2026-09-15T07:20:12+00:00"
   }
 }

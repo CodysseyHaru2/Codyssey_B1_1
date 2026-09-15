@@ -1,6 +1,6 @@
 # 소개 페이지 구현·검증 기록
 
-시험일: 2026-09-15 (Asia/Seoul). 대상: 로컬 `http://127.0.0.1:4173/`. 공개 Pages 검증이 아니다.
+시험일: 2026-09-15 (Asia/Seoul). 아래 본문은 로컬 `http://127.0.0.1:4173/` 시험 이력이다. 후속 공개 Pages 시험은 [배포 검증 기록](deployment.md)에 별도로 기록했다. 화면 파일 3장은 후속 Task에서 실제 공개 페이지 캡처로 갱신했다.
 
 ## 환경과 판정 원칙
 
@@ -24,9 +24,9 @@
 | R7 | ES6+ | map/template/destructuring으로 카드 생성, const/let·화살표·forEach 실제 사용, structure test | PASS |
 | R8 | fetch/비동기·4상태·403/재시도 | projects test 6개, 공개 API curl 및 앱 실 성공 10개, 이후 제한/재시도 안내 | PASS (앱/로직) |
 | R9 | 최소 3개 상태→렌더 | README 테마/API/폼 흐름 표와 함수, 위 상태 시험 | PASS |
-| R10 | GitHub Pages·README·URL·3캡처 제출 | README와 실제 3 PNG 작성. 기존 remote는 있으나 이번 변경 미push. Pages URL 없음 | 부분 완료 / 배포 미검증 |
+| R10 | GitHub Pages·README·URL·3캡처 제출 | 당시 로컬 캡처만 작성. 후속 배포 Task에서 실제 Pages/공개 소스 URL과 공개 화면 3장을 확인 | PASS (후속 공개 배포 근거 참조) |
 
-전체 과제 완료 판정: **아직 아님**. Chrome 및 공개 배포/제출 URL이 남아 있다.
+공개 배포/제출 URL은 후속 Task에서 확인됐다. **Chrome 최종 기능 검증은 미완료**이며 사용자 UI의 검증 Task 완료 확정과 실제 시험 근거를 구분한다.
 
 ## 실제 반응형 경계
 
@@ -85,7 +85,7 @@
 - [mobile.png](screenshots/mobile.png): 360×780 viewport의 Hero 라이트.
 - [dark.png](screenshots/dark.png): 1280×900 viewport의 Hero 다크.
 
-세 파일은 실제 앱 브라우저 캡처다. 설정 viewport 전체와 저장 영역이 같지는 않으며 PNG 실 크기는 desktop/dark=1265×889, mobile=345×748이다. Chrome 화면 또는 API 성공 카드의 캡처로 표시하지 않는다. 실제 인물 사진/운영 화면/실측 성과 도표가 아닌 HYJ 및 구조 요약 SVG를 사용한다.
+위 설명은 로컬 시험 당시 캡처 이력이다. 현재 같은 파일명 3장은 후속 Task의 실제 GitHub Pages Hero 캡처로 갱신했다. 최종 형식과 크기는 실제 PNG desktop/dark=1265×889, mobile=345×748이며 배포 기록에서 확인할 수 있다. Chrome 화면 또는 API 성공 카드의 캡처로 표시하지 않는다. 실제 인물 사진/운영 화면/실측 성과 도표가 아닌 HYJ 및 구조 요약 SVG를 사용한다.
 
 ## 콘텐츠·공개 범위
 
@@ -96,7 +96,7 @@
 ## 남은 제출·확인
 
 1. 안정된 Chrome에서 6폭과 성공 카드·메뉴·테마 복원·Observer·폼·콘솔을 확인하고 실제 버전/결과 기록.
-2. 공개 저장소 및 Git 기록/콘텐츠 범위 선택. 현 origin은 CodysseyHaru2/Codyssey_B1_1이나 선택·push·공개 승인을 대신하지 않는다.
-3. GitHub Pages 배포 시 index.html/css/js/images만 선별. `.loom`·PDF·작업 로그를 웹 자산으로 게시하지 않음.
-4. 외부 GitHub 저장소 URL·실제 Pages URL·상대 자산·핵심 동작 확인 후 README 갱신.
-5. 배포 화면으로 제출용 3캡처를 다시 생성할 경우 이 로컬 캡처와 구분해 기록.
+2. 저장소/공개 범위 선택 및 배포는 후속 사용자 승인에 따라 완료. 기존 main과 로컬 develop의 이력은 업로드하지 않음.
+3. 공개 자산 선별 및 `.loom`·PDF·작업 로그 제외 확인 완료.
+4. 실제 공개 소스/Pages URL·상대 자산·핵심 동작 확인 및 README 갱신 완료.
+5. 제출용 3캡처를 실제 공개 페이지에서 갱신하고 로컬 시험 이력과 구분함.

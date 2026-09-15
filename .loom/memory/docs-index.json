@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-15T07:17:04+00:00",
+  "generated_at": "2026-09-15T07:26:48+00:00",
   "docs_paths": [
     "docs"
   ],
@@ -33,6 +33,15 @@
       "size_bytes": 82
     },
     {
+      "id": "docs/deployment.md",
+      "title": "GitHub Pages 배포 기록",
+      "path": "docs/deployment.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-09-15T16:26:47+09:00",
+      "size_bytes": 7775
+    },
+    {
       "id": "docs/portfolio-spec.md",
       "title": "홍용재 소개 포트폴리오 명세",
       "path": "docs/portfolio-spec.md",
@@ -47,8 +56,8 @@
       "path": "docs/verification.md",
       "source": "repository_docs",
       "document_type": "docs",
-      "updated_at": "2026-09-15T16:17:03+09:00",
-      "size_bytes": 9792
+      "updated_at": "2026-09-15T16:25:11+09:00",
+      "size_bytes": 10121
     }
   ],
   "path": "/Users/hongyongjae/Desktop/Codyssey_B1_1/.loom/memory/docs-index.json"

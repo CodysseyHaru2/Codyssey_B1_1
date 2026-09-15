@@ -2,12 +2,13 @@
 
 Backend / AI Platform Engineer 홍용재를 소개하는 모바일 퍼스트 단일 페이지입니다. 이력서와 기존 소개 사이트를 대조해, 기능 구현뿐 아니라 비동기 AI 처리·관측·복구·사람이 통제하는 작업 경계를 설명하도록 구성했습니다.
 
-현재 상태: **로컬 구현 완료, Chrome 최종 확인 및 공개 배포 미완료**. 저장소/배포 URL 제출 과제 전체가 완료된 상태는 아닙니다.
+현재 상태: **GitHub Pages 배포 완료, Chrome 최종 확인은 미완료**. 실제 공개 페이지에서 자산·반응형·메뉴·테마 복원·실 API·문의 데모를 확인했습니다. Chrome 검증 완료로 과장하지 않습니다.
 
-- 현재 Git remote: [CodysseyHaru2/Codyssey_B1_1](https://github.com/CodysseyHaru2/Codyssey_B1_1) — 이번 변경은 push하지 않았습니다.
-- GitHub Pages URL: 아직 없음. 배포 대상과 공개 범위 선택 후 기록합니다.
+- 저장소: [CodysseyHaru2/Codyssey_B1_1](https://github.com/CodysseyHaru2/Codyssey_B1_1).
+- 공개 소스: [소개 페이지 배포 브랜치](https://github.com/CodysseyHaru2/Codyssey_B1_1/tree/codex/portfolio-pages). 기존 main은 변경하지 않고 사이트 자산만 별도 push했습니다.
+- GitHub Pages: [홍용재 소개 페이지](https://codysseyharu2.github.io/Codyssey_B1_1/).
 - 로컬 주소: `http://127.0.0.1:4173/` — 로컬 서버 실행 중에만 열립니다.
-- [요구사항·콘텐츠 명세](docs/portfolio-spec.md), [실제 검증 기록](docs/verification.md).
+- [요구사항·콘텐츠 명세](docs/portfolio-spec.md), [로컬 검증 기록](docs/verification.md), [공개 배포 검증 기록](docs/deployment.md).
 
 ## 기술과 파일 구조
 
@@ -24,7 +25,9 @@ tests/*.test.cjs            의존성 없는 자동 테스트
 tests/browser-server.cjs   브라우저 QA 전용 대체 응답 서버
 docs/portfolio-spec.md     출처와 요구사항 명세
 docs/verification.md       시험 결과·한계·제출 체크리스트
-docs/screenshots/          실제 로컬 화면 3종
+docs/deployment.md         실제 공개 URL·안전성·배포 검증
+docs/screenshots/          실제 공개 페이지 화면 3종
+scripts/export-pages.cjs   공개 자산만 선별하는 배포 도구
 .loom/                     로컬 작업 계약·결정·실행 기록 (배포 자산 아님)
 ```
 
@@ -38,7 +41,7 @@ Python 3가 있으면 별도 패키지 없이 실행할 수 있습니다.
 python3 -m http.server 4173 --bind 127.0.0.1
 ```
 
-`http://127.0.0.1:4173/`를 엽니다. 종료는 해당 터미널의 Ctrl+C입니다. 로컬 서버는 폴더 전체를 제공하므로 외부 네트워크로 노출하지 않습니다. 공개 배포 자산은 `index.html`, `css/`, `js/`, `images/`만 선별해야 합니다. `.loom/`, PDF, 작업 로그는 Pages에 포함하지 않습니다.
+`http://127.0.0.1:4173/`를 엽니다. 종료는 해당 터미널의 Ctrl+C입니다. 로컬 서버는 폴더 전체를 제공하므로 외부 네트워크로 노출하지 않습니다. 공개 배포는 `scripts/export-pages.cjs`로 HTML/CSS/JS/SVG, `.nojekyll`, 공개용 README와 최종 화면 3장만 선별합니다. `.loom/`, PDF, 로컬 문서·작업 로그·QA 서버는 Pages에 포함하지 않습니다.
 
 ## 기능과 설계
 
@@ -113,7 +116,7 @@ node tests/browser-server.cjs
 
 `http://127.0.0.1:4174/cases/success/`를 열고 `success` 대신 `empty`, `error`, `limited`, `loading`을 사용할 수 있습니다. 시험 서버가 메모리에서 API 주소만 로컬 대체 응답으로 바꿉니다. 실제 소스 파일과 4173 페이지를 변경하지 않으며 외부 API를 호출하지 않습니다. 샘플 저장소는 QA 전용이라고 표시하고 공개 배포에는 포함하지 않습니다. 종료는 Ctrl+C입니다.
 
-아래는 **앱 브라우저 실제 viewport 캡처**이며 Chrome 캡처나 공개 배포 화면이 아닙니다.
+아래는 **실제 GitHub Pages를 앱 브라우저에서 캡처한 화면**입니다. Chrome 캡처가 아닙니다. 2026-09-15 배포 Task에서 로컬 캡처 파일을 갱신했으며 실제 PNG 형식과 크기를 확인했습니다.
 
 데스크톱 (1280×900 설정, PNG 1265×889):
 
@@ -127,10 +130,11 @@ node tests/browser-server.cjs
 
 ![데스크톱 다크 화면](docs/screenshots/dark.png)
 
-## 공개 전 남은 확인
+## 배포와 남은 확인
 
 - 안정된 Chrome에서 화면·기능·콘솔을 재검증하고 기록을 갱신합니다.
-- 배포 대상 저장소, 공개 가능한 콘텐츠와 Git 기록 범위를 확인합니다. Git remote가 있다고 공개 승인을 가정하지 않습니다.
-- GitHub Pages 게시 후 실제 저장소 URL/Pages URL, 상대 자산과 API·메뉴·폼 동작을 확인합니다.
+- 사용자의 기존 저장소 선택 및 즉시 배포 요청에 따라 GitHub Pages를 게시했습니다. 기존 main과 로컬 develop의 작업 기록은 업로드하지 않았습니다.
+- 공개 페이지의 9개 HTML/CSS/JS/SVG가 HTTP 200이고 로컬 파일과 바이트 단위로 일치합니다. 공개 API 10개 카드가 있는 상태의 6폭/메뉴/테마 복원/폼을 확인했습니다.
+- 공개 화면에서 정상 API 응답을 확인했습니다. 오류·빈 목록·403·재시도는 동일 소스의 로컬 제어 응답·자동 테스트 증거이며 공개 API를 고의로 실패시키지 않았습니다.
 - 원본 이력서·전화번호·미확정 프로젝트 기간·충돌하는 블로그 주소·실제 장비 접근 링크는 포함하지 않습니다.
 - 성과의 독립 재측정을 하지 않았고, AI 완료 ops/s와 HTTP req/s 또는 목표값을 혼동하는 숫자 주장은 넣지 않았습니다.
