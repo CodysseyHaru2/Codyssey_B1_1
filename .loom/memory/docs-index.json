@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-15T06:18:12+00:00",
+  "generated_at": "2026-09-15T07:13:13+00:00",
   "docs_paths": [
     "docs"
   ],
@@ -40,6 +40,15 @@
       "document_type": "docs",
       "updated_at": "2026-09-15T15:17:33+09:00",
       "size_bytes": 19524
+    },
+    {
+      "id": "docs/verification.md",
+      "title": "소개 페이지 구현·검증 기록",
+      "path": "docs/verification.md",
+      "source": "repository_docs",
+      "document_type": "docs",
+      "updated_at": "2026-09-15T16:12:42+09:00",
+      "size_bytes": 9036
     }
   ],
   "path": "/Users/hongyongjae/Desktop/Codyssey_B1_1/.loom/memory/docs-index.json"
