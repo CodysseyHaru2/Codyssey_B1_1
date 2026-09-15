@@ -3,11 +3,11 @@
   "job_id": "job-20260915-060954-github-pages-4b0b3a3a",
   "title": "develsvai GitHub API와 대표 프로젝트 콘텐츠를 결합한 상태별 카드 구현",
   "description": "fetch와 async/await, try/catch로 https://api.github.com/users/develsvai/repos를 호출하고 response.ok를 검사한다. 요청 상태 loading/success/error/empty를 명시적으로 관리한다. 성공 응답의 실제 저장소 객체를 구조분해하고 map+템플릿 리터럴로 article 카드를 생성하며 안전하게 innerHTML에 렌더링한다. 표시 데이터는 실제 name/description/language/stargazers_count/html_url/homepage 등이다. Loom/DeepQuest/TinyPilot-KVM-Docker가 실제 응답에 있을 때만 Task 1의 출처 있는 설명·공개 가능한 이미지·근거 링크를 해당 저장소에 결합하고 대표 순서 Loom→DeepQuest→TinyPilot로 배치한다. 나머지 저장소도 실제 데이터로 표시한다. 저장소가 없거나 미일치인 경우 가짜 API 카드/성과/스타 수를 만들지 않는다. API 오류를 정적 카드로 덮어 성공처럼 보여주지 않는다. 문구: 로딩 'GitHub 프로젝트를 불러오는 중입니다…', 오류 '프로젝트를 불러올 수 없습니다'와 재시도, 빈 상태 '표시할 프로젝트가 없습니다', 403 요청 제한 안내와 재시도. 숫자 주장은 원문 출처·측정 계층을 유지하고 DeepQuest AI ops/s와 HTTP req/s를 합치지 않는다. description 누락/language null/homepage 없음에 대한 자연스러운 대체 표시를 제공한다. 외부 데이터는 HTML escape 또는 안전한 DOM 처리와 http/https 링크 검증으로 삽입하고 새 창 링크 보안을 적용한다.",
-  "status": "PENDING",
+  "status": "RUNNING",
   "created_at": "2026-09-15T06:11:30+00:00",
-  "updated_at": "2026-09-15T06:11:30+00:00",
+  "updated_at": "2026-09-15T06:29:55+00:00",
   "order_index": 4,
-  "assigned_agent": "",
+  "assigned_agent": "codex",
   "depends_on": [
     "task-20260915-061129-task-1b697181"
   ],
@@ -22,10 +22,12 @@
   "document_output_exceptions": [],
   "run_attempts": 0,
   "last_error": "",
-  "commit_refs": [],
-  "branch_name": "",
-  "git_dirty": false,
-  "git_snapshot_captured_at": "",
+  "commit_refs": [
+    "c89429a443b9b953048069c6abb5dd0f2fcab34b"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-09-15T06:29:55+00:00",
   "artifacts": [],
   "source_proposal_id": "",
   "source_prompt": ""
