@@ -2,9 +2,9 @@
   "id": "task-run-20260915-072007-task-def-20260915-061130-github-pages-url-8631f0-4e03b0cf",
   "job_run_id": "job-run-20260915-061556-job-20260915-060954-github-pages-4b0b3a3a-2c597ae1",
   "task_definition_id": "task-def-20260915-061130-github-pages-url-8631f0ca",
-  "status": "RUNNING",
+  "status": "DONE",
   "created_at": "2026-09-15T07:20:07+00:00",
-  "updated_at": "2026-09-15T07:20:07+00:00",
+  "updated_at": "2026-09-15T07:26:54+00:00",
   "legacy_task_id": "task-20260915-061130-github-pages-url-d919212a",
   "attempt": 1,
   "assigned_agent": "codex",
@@ -13,13 +13,31 @@
   "lease_expires_at": "",
   "queued_at": "",
   "started_at": "2026-09-15T07:20:07+00:00",
-  "completed_at": "",
+  "completed_at": "2026-09-15T07:26:54+00:00",
   "last_error": "",
-  "commit_refs": [],
-  "branch_name": "",
-  "git_dirty": false,
-  "git_snapshot_captured_at": "",
-  "artifacts": [],
-  "checkpoint_ids": [],
+  "commit_refs": [
+    "11615b84b68fae4c9d3aa49485114b1dbb67fdea",
+    "d3a687aa4b620acc67d7869eed250fb72d2f2631"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-09-15T07:26:54+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20260915-061130-github-pages-url-d919212a/agent-events.jsonl",
+    ".loom/tasks/task-20260915-061130-github-pages-url-d919212a/artifacts.json",
+    ".loom/tasks/task-20260915-061130-github-pages-url-d919212a/context.md",
+    ".loom/tasks/task-20260915-061130-github-pages-url-d919212a/decision.md",
+    ".loom/tasks/task-20260915-061130-github-pages-url-d919212a/git-snapshot.json",
+    ".loom/tasks/task-20260915-061130-github-pages-url-d919212a/logs.txt",
+    ".loom/tasks/task-20260915-061130-github-pages-url-d919212a/previous-results.md",
+    ".loom/tasks/task-20260915-061130-github-pages-url-d919212a/prompt.md",
+    ".loom/tasks/task-20260915-061130-github-pages-url-d919212a/result.md",
+    ".loom/tasks/task-20260915-061130-github-pages-url-d919212a/troubleshooting.md",
+    "README.md",
+    "docs/deployment.md"
+  ],
+  "checkpoint_ids": [
+    "checkpoint-20260915-072654-task-completed-github-pages-url-b28383dc"
+  ],
   "review_required_reason": ""
 }

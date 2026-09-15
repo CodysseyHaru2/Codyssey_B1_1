@@ -10,3 +10,4 @@ Public app screenshots captured and visually inspected. JPEG bytes mechanically 
 Public README live URL and final 3 screenshots normal push: ed53f3b4a3ec12ec44436a36a2080a46125cba97. Private workflow/PDF/local docs/QA server excluded.
 Chrome final functional/responsive/console testing remains incomplete; previous Task web-user DONE acceptance preserved, not treated as actual Chrome PASS.
 Validation result: final ed53f3b4a3ec12ec44436a36a2080a46125cba97 Pages built at 2026-09-15T07:25:38Z, error null. Public README and three PNG files HTTP 200 and bytes equal final commit files; PNG MIME image/png. Remote tree contains only 14 allowlisted files.
+[2026-09-15T07:26:54+00:00] agent=codex task=task-20260915-061130-github-pages-url-d919212a 기존 저장소의 사이트 자산만 GitHub Pages 게시 완료. 실제 외부 URL·14개 허용 파일·9개 앱 자산·공개 PNG 3장·6폭·메뉴·테마 복원·실 API 10카드·문의 데모 검증 통과. Chrome 최종 미검증 한계 유지.

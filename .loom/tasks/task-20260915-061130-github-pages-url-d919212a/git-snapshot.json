@@ -16,5 +16,17 @@
     ],
     "captured_at": "2026-09-15T07:20:07+00:00"
   },
-  "after": null
+  "after": {
+    "available": true,
+    "branch_name": "develop",
+    "commit_sha": "d3a687aa4b620acc67d7869eed250fb72d2f2631",
+    "dirty": true,
+    "staged_files": [],
+    "modified_files": [
+      ".loom/job-runs/job-run-20260915-061556-job-20260915-060954-github-pages-4b0b3a3a-2c597ae1/job-run.json",
+      ".loom/task-definitions/task-def-20260915-061130-github-pages-url-8631f0ca/task-definition.json"
+    ],
+    "untracked_files": [],
+    "captured_at": "2026-09-15T07:26:54+00:00"
+  }
 }
