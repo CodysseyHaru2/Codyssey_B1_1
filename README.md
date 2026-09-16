@@ -6,7 +6,7 @@ Backend / AI Platform Engineer 홍용재를 소개하는 모바일 퍼스트 단
 
 - 저장소: [CodysseyHaru2/Codyssey_B1_1](https://github.com/CodysseyHaru2/Codyssey_B1_1).
 - 공개 소스: [소개 페이지 배포 브랜치](https://github.com/CodysseyHaru2/Codyssey_B1_1/tree/codex/portfolio-pages). 기존 main은 변경하지 않고 사이트 자산만 별도 push했습니다.
-- GitHub Pages: [홍용재 소개 페이지](https://codysseyharu2.github.io/Codyssey_B1_1/).
+- GitHub Pages: [홍용재 소개 페이지](https://develsvai.github.io/Codyssey_B1_1/).
 - 로컬 주소: `http://127.0.0.1:4173/` — 로컬 서버 실행 중에만 열립니다.
 - [요구사항·콘텐츠 명세](docs/portfolio-spec.md), [로컬 검증 기록](docs/verification.md), [공개 배포 검증 기록](docs/deployment.md).
 
